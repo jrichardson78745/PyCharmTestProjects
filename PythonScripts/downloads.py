@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import mechanize
 from time import sleep
 #Make a Browser (think of this as chrome or firefox etc)
@@ -25,7 +26,7 @@ def downloadlink(l):
     f=open(l.text,"w") #perhaps you should open in a better way & ensure that file doesn't already exist.
     br.click_link(l)
     f.write(br.response().read())
-    print l.text," has been downloaded"
+    print (l.text," has been downloaded")
     #br.back()
 
 for l in myfiles:

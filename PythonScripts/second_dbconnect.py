@@ -2,8 +2,11 @@
 
 import MySQLdb
 
+username = input("What is the username to connect?")
+pwd = input("What is the password to use?")
+
 # Open database connection
-db = MySQLdb.connect("localhost","john","JEllen69!","phpmyadmin" )
+db = MySQLdb.connect("localhost",username,pwd,"phpmyadmin" )
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
